@@ -14,4 +14,11 @@ class BlogController extends Controller
             'list' => $list
         ]);
     }
+
+    public function show(int $id)
+    {
+        return view('blog.show', [
+            'blog' => Blog::find($id)
+        ]);
+    }
 }

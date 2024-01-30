@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 Route::get('/hello/{name}', [HelloController::class, 'hello']);
 Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/blog/{id}', [BlogController::class, 'show']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

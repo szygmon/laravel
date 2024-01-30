@@ -11,7 +11,7 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <ul>
                     @foreach($list as $blog)
-                        <li><a href="/blog/{{ $blog->id }}">{{ $blog->title }} - {{ $blog->author }} - {{ $blog->created_at }}</a></li>
+                        <li><a href="/blog/{{ $blog->id }}">{{ $blog->title }} - {{ $blog->writer->name }} - {{ $blog->created_at }}</a></li>
                     @endforeach
                     </ul>
                 </div>

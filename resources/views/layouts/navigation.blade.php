@@ -15,6 +15,9 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         Kokpit
                     </x-nav-link>
+                    <x-nav-link :href="route('admin.blog.index')" :active="request()->routeIs('admin.blog.index')">
+                        Admin->Blog
+                    </x-nav-link>
                 </div>
             </div>
 

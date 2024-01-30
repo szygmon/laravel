@@ -23,6 +23,12 @@ Route::get('/hello/{name}', [HelloController::class, 'hello']);
 Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/blog/{id}', [BlogController::class, 'show']);
 
+Route::get('/admin/blog', [App\Http\Controllers\AdminBlogController::class, 'index'])->name('admin.blog.index');
+Route::get('/admin/blog/create', [App\Http\Controllers\AdminBlogController::class, 'create'])->name('admin.blog.create');
+Route::post('/admin/blog', [App\Http\Controllers\AdminBlogController::class, 'store'])->name('admin.blog.store');
+Route::get('/admin/blog/{id}/edit', [App\Http\Controllers\AdminBlogController::class, 'edit'])->name('admin.blog.edit');
+Route::put('/admin/blog', [App\Http\Controllers\AdminBlogController::class, 'update'])->name('admin.blog.update');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
